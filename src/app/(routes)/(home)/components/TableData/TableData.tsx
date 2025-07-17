@@ -1,4 +1,4 @@
-import type { Element } from "../../../../../types/element";
+import type { Element } from "@prisma/client";
 import { DataTable } from "./data-table";
 import { columns } from "./colums";
 
