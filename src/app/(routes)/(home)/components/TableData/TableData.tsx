@@ -1,6 +1,8 @@
-import { Element } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import { DataTable } from "./data-table";
 import { columns } from "./colums";
+
+export type Element = Prisma.ElementGetPayload<{}>;
 
 export type TableDataProps = {
   elements: Element[];

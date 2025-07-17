@@ -1,5 +1,7 @@
 "use client";
 
+import { Prisma } from "@prisma/client";
+import { ColumnDef } from "@tanstack/react-table";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -9,13 +11,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { toast } from "sonner";
-import { Element } from "@prisma/client";
-import { ColumnDef } from "@tanstack/react-table";
 import { Copy, MoreHorizontal, User } from "lucide-react";
 
-export type ColumnProps = Element;
+// Tipo Element correcto usando Prisma y MongoDB
+export type Element = Prisma.ElementGetPayload<{}>;
 
-export const columns: ColumnDef<ColumnProps>[] = [
+export const columns: ColumnDef<Element>[] = [
   {
     accessorKey: "name",
     header: "Name",
