@@ -5,7 +5,7 @@ import { db } from "@/lib/db";
 
 export const authOptions: AuthOptions = {
   session: {
-    strategy: "jwt",  // aquí TS sabe que es el literal "jwt"
+    strategy: "jwt", 
   },
   pages: {
     signIn: "/login",
