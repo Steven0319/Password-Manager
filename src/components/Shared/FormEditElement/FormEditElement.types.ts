@@ -1,4 +1,4 @@
-import { Element } from "@prisma/client";
+import { Element } from "../../../types/element";
 
 export type FormEditElementProps = {
   dataElement: Element;

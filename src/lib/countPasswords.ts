@@ -1,4 +1,4 @@
-import { Element } from "@prisma/client";
+import { Element } from "../types/element";
 
 export function countPasswords(elements: Element[]) {
   const passwordCounts = new Map<string, number>();
