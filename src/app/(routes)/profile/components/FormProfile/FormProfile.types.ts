@@ -1,4 +1,4 @@
-import { User } from "@prisma/client";
+import { User } from "../../../../../types/element";
 
 export type FormProfileProps = {
   user: User;
