@@ -1,6 +1,6 @@
 "use client";
 
-import type { Element } from "@prisma/client";
+import type { Element } from "../../../../../types/element";
 import { ColumnDef } from "@tanstack/react-table";
 import { Button } from "@/components/ui/button";
 import {
