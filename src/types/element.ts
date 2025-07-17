@@ -12,3 +12,16 @@ export type Element = {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type User = {
+  id: string;
+  name: string | null;
+  username: string | null;
+  email: string | null;
+  image: string | null;
+  coverImage: string | null;
+  profileImage: string | null;
+  hashedPassword: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+};
