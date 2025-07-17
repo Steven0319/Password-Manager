@@ -18,6 +18,7 @@ const SidebarRoutes = () => {
   return (
     <div>
       <SingleItem href="/" label="Homepage" icon={House} />
+
       {dataSidebarElements.map(({ title, icon: Icon, children }) => (
         <Accordion
           type="single"
@@ -31,7 +32,8 @@ const SidebarRoutes = () => {
                 <div className="bg-blue-100/20 p-2 rounded-md">
                   <Icon size={20} />
                 </div>
-                <title />
+                {/* Aquí se muestra el título correctamente */}
+                {title}
               </div>
             </AccordionTrigger>
             <AccordionContent>
@@ -50,11 +52,13 @@ const SidebarRoutes = () => {
           </AccordionItem>
         </Accordion>
       ))}
+
       <SingleItem
         href="/generator"
         label="Generator"
         icon={RectangleEllipsis}
       />
+
       {dataSidebarConfiguration.map(({ title, icon: Icon, children }) => (
         <Accordion
           type="single"
@@ -68,7 +72,8 @@ const SidebarRoutes = () => {
                 <div className="bg-blue-100/20 p-2 rounded-md">
                   <Icon size={20} />
                 </div>
-                <title />
+                {/* Aquí también el título se muestra */}
+                {title}
               </div>
             </AccordionTrigger>
             <AccordionContent>
@@ -95,6 +100,7 @@ const SidebarRoutes = () => {
           </AccordionItem>
         </Accordion>
       ))}
+
       <SingleItem href="/analytics" label="Analytics" icon={BarChart} />
       <SingleItem
         onClick={() => console.log("close session")}

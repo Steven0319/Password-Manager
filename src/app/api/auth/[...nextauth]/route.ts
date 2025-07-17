@@ -1,11 +1,11 @@
-import NextAuth from "next-auth";
+import NextAuth, { type AuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { compare } from "bcrypt";
 import { db } from "@/lib/db";
 
-const handler = NextAuth({
+export const authOptions: AuthOptions = {
   session: {
-    strategy: "jwt",
+    strategy: "jwt",  // aquí TS sabe que es el literal "jwt"
   },
   pages: {
     signIn: "/login",
@@ -45,6 +45,8 @@ const handler = NextAuth({
       },
     }),
   ],
-});
+};
+
+const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };

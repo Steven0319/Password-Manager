@@ -8,7 +8,7 @@ export default async function Home() {
   const session = await getServerSession();
 
   if (!session || !session.user?.email) {
-    return redirect("/");
+    return redirect("/login");
   }
 
   const user = await db.user.findUnique({
