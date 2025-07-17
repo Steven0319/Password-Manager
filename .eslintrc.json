@@ -1,26 +1,13 @@
 {
   "root": true,
   "extends": ["next/core-web-vitals", "prettier"],
-  "plugins": ["simple-import-sort", "unused-imports"],
   "rules": {
     "no-console": "warn",
-    "unused-imports/no-unused-imports": "warn",
-    "unused-imports/no-unused-vars": [
-      "warn",
-      {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
-        "argsIgnorePattern": "^_"
-      }
-    ],
-    "simple-import-sort/imports": "warn",
-    "simple-import-sort/exports": "warn",
     "react-hooks/exhaustive-deps": "warn"
   },
   "overrides": [
     {
-      "files": ["**/db.ts"], 
+      "files": ["**/db.ts"],
       "rules": {
         "no-var": "off"
       }
